@@ -13,7 +13,7 @@ import (
 type AccesoHistoriaClinica struct {
 	IdAccesoHistoria  int        `orm:"column(id_acceso);pk;auto"`
 	FechaAcceso       *time.Time `orm:"column(fecha_acceso);type(timestamp without time zone);null"`
-	ProfesionaId      int        `orm:"column(profesional_id);null"`
+	ProfesionalId      int        `orm:"column(profesional_id);null"`
 	IdHistoriaClinica int        `orm:"column(id_historia_clinica);null"`
 }
 
