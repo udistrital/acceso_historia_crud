@@ -6,6 +6,7 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	"github.com/astaxie/beego/plugins/cors"
+	"github.com/udistrital/utils_oas/customerrorv2"
 	_ "github.com/lib/pq"
 )
 
@@ -28,6 +29,6 @@ func main() {
 		ExposeHeaders:    []string{"Content-Length"},
 		AllowCredentials: true,
 	}))
-
+	beego.ErrorController(&customerrorv2.CustomErrorController{})
 	beego.Run()
 }
