@@ -15,6 +15,9 @@ type AccesoHistoriaClinica struct {
 	FechaAcceso       *time.Time `orm:"column(fecha_acceso);type(timestamp without time zone);null"`
 	ProfesionalId      int        `orm:"column(profesional_id);null"`
 	IdHistoriaClinica int        `orm:"column(id_historia_clinica);null"`
+	FechaCreacion     *time.Time `orm:"column(fecha_creacion);type(timestamp without time zone);null"`
+	FechaModificacion *time.Time `orm:"column(fecha_modificacion);type(timestamp without time zone);null"`
+	Activo            bool       `orm:"column(activo);null"`
 }
 
 func (t *AccesoHistoriaClinica) TableName() string {
